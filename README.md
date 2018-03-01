@@ -12,10 +12,10 @@ First, create a local copy of the repo in a temporary directory where you can se
 ```
 /config/mysite.com--production/configuration.php
 ```
-There are two example directories in the config directory to show how to format the directory name. You should delete these before moving the files to your site's environments. Once you have setup all your configuration files, you can move the files to each instance of your Joomla site.
+There are two example directories in the config directory to show how to format the directory name. You should delete these before moving the files to your site's environments. Once you have set up all your configuration files, you can move the files to each instance of your Joomla site.
 
 ## A note on security
-Typically, it is not reccomended to include sensitive details in version control systems. If this is a problem, you can create an .env file to contain your database configuration while configuration.php contains the other site information. This defeats the purpose of this repo somewhat, so it is a playoff between security and convienience. If you need to create an .env file see [dotenv](https://github.com/motdotla/dotenv "Dotenv"), which allows creating env files easily. You can then load env variables into your configuration.php file in the following way,
+Typically, it is not recommended to include sensitive details in version control systems. If this is a problem, you can create an .env file to contain your database configuration while configuration.php contains the other site information. This defeats the purpose of this repo somewhat, so it is a playoff between security and convenience. If you need to create an .env file see [dotenv](https://github.com/motdotla/dotenv "Dotenv"), which allows creating env files easily. You can then load env variables into your configuration.php file in the following way,
 ```php
 class JConfig {
 	public $user = '';
@@ -30,4 +30,4 @@ class JConfig {
 ```
 
 ## Disclaimer
-So far, the setup has only been tested on one configuration (Joomla 3.8.5/MySQLi). It is therefore reccomended that you take a backup before modifying your site and report any issues you encounter so they can be fixed.
+So far, the setup has only been tested on one configuration (Joomla 3.8.5/MySQLi). It is, therefore, recommended that you take a backup before modifying your site and report any issues you encounter so they can be fixed.
